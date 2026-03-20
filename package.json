@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "node --require ./dns-fix.cjs ./node_modules/next/dist/bin/next dev --turbopack",
+    "build": "node --require ./dns-fix.cjs ./node_modules/next/dist/bin/next build --turbopack",
     "start": "next start",
-    "lint": "eslint",
-    "test:db": "node scripts/test-db.mjs"
+    "lint": "eslint"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.10",
